@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "React Js",
+    "img": "./logo192.png"
+  },
+  {
+    "id": 2,
+    "name": "Cloud Computing",
+    "img": "./cloud.png"
+  },
+  {
+    "id": 3,
+    "name": "Data anlytic",
+    "img": "./data.png"
+  },
+  {
+    "id": 4,
+    "name": "Angular Js",
+    "img": "./angular.png"
+  }
+]

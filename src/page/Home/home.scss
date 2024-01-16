@@ -44,7 +44,13 @@
                
                 .card{
                     margin: 20px 0px 10px 20px;
-                    height: 500px;
+                    height: 450px;
+                    #img{
+                        width: 250px;
+                        height: 250px;
+                        padding: 10px 15px;
+                        margin-left: 20px;
+                    }
                 }
             }
       

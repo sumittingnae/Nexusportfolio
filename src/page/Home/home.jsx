@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../component/header/header";
 import './home.scss'
 import { Card,Button } from "react-bootstrap";
+import datas from './service.json'
 
 const Home = () => {
+  const[service,setService]=useState([]);
+  useEffect(()=>{
+    setService(datas);
+  })
   return (
     <>
       <Header />
@@ -161,11 +166,11 @@ const Home = () => {
                   <h1>Services</h1>
                 </div>
                 <div className="s-card">
-                  {[...Array(6)].map((_, index) => (
-                    <Card key={index} style={{ width: "18rem" }}>
-                      <Card.Img variant="top" src="./Online.svg" />
+                  {service.map((items) => (
+                    <Card key={items.id} style={{ width: "18rem" }}>
+                      <Card.Img variant="top" src={items.img} id="img" />
                       <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
+                        <Card.Title>{items.name}</Card.Title>
                         <Card.Text>
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
