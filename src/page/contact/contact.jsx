@@ -66,7 +66,24 @@ const contact = () => {
                     </div>
 
                     <div className="right">
-                            
+                      <div className="forms">
+                        <div className="input-Forms">
+                          <label>Full Name</label>
+                          <br />
+                          <input type="text" placeholder="Full Name" />
+                          <label>Full Name</label>
+                          <br />
+                          <input type="text" placeholder="Full Name" />
+                          <label>Full Name</label>
+                          <br />
+                          <input type="text" placeholder="Full Name" />
+                          <label>Full Name</label>
+                          <br />
+                          <textarea type="text" placeholder="Full Name" />
+
+                          <p className="btn btn-secondary">Submit</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
