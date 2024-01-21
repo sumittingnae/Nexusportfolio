@@ -12,7 +12,7 @@ const footer = () => {
               <div className="col-6 col-12">
                 <div className="col-lg-6 w-100">
                   <div className="footers">
-                    <div className="col-4">
+                    <div className="col-4 p">
                       Get Conntect With us in social networks:
                     </div>
                     <div className="search">
@@ -117,7 +117,7 @@ const footer = () => {
               <div className="col-6 col-12">
                 <div className="col-lg-6 w-100">
                   <div className="footers">
-                    <div className="col-4">
+                    <div className="col-4 w-100">
                       All Copyrights @Nexus Software
                     </div>
                     <div className="text">
