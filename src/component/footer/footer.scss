@@ -1,0 +1,117 @@
+.footer{
+    background: #e4e3e3;
+    width: 100%;
+    height: 10vh;
+    padding: 10px 0px;
+    .container{
+        .wrapper{
+            .row{
+                .footers{
+                    display: flex;
+                                     
+                        .search{
+                       
+                        position:absolute;
+                        right: 50px;
+                        width: 500px;
+                        
+                        i{
+                            font-size: 50px;
+                            margin-right: 20px;
+                        }
+                    }
+                    }
+            }
+        }
+    }
+}
+
+.footer-2 {
+    background: #999292;
+    width: 100%;
+    height: 40vh;
+    padding: 30px 0px;
+    color: aliceblue;
+
+    .container {
+        .wrapper {
+            .row {
+                .footers {
+                    display: flex;
+                    .row{
+                        // border: 1px solid #000;
+                        width: 100%;
+                        .colunm-1{
+                            //border: 1px solid #000;
+                            width: 1000px;
+                            .logo{
+                                width: 200px;
+                                img{
+                                    width: 100%;
+                                   
+
+                                }
+                                 p{
+                                        width: 320px;
+                                        //border: 1px solid #000;
+                                        padding: 10px 10px;
+                                    }
+                            }
+
+                        }
+                    .colunm-2{
+                        text-align: center;
+                        ul{
+                            margin-top: 20px;
+                            li{
+                                margin-bottom: 20px;
+                                list-style: none;
+                                #menu{
+                                    text-decoration: none;
+                                    color: #fff;
+                                    margin-bottom: 20px;
+                                }
+                                #menu:hover{
+                                    
+                                    color: #666565;
+                                }
+                            }
+                        }
+                    }
+                        .colunm-3{
+                            p{
+                                margin-top: 20px;
+                                margin-bottom: 40px;
+                            }
+
+                        }
+                         .colunm-4{
+                           .search{
+                            input{
+                                width: 300px;
+                                height: 40px;
+                                padding: 0px 20px;
+                                border-radius: 10px;
+                                border: 2px solid #000 ;
+                                background: none;
+                                color: #ffffff;
+                            }
+                           
+
+                           }
+                            .btn{
+                            margin-top: 15px;
+                            background-color: #f3f1f1;
+                            color: #131313;
+                            
+                          }
+
+                        }
+
+                    }
+                    
+            }
+        }
+    }
+}
+}

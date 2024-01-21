@@ -29,7 +29,7 @@ const about=()=>{
           </div>
         </div>
 
-        <div className="content">
+        <div className="contents">
           <div className="container">
             <div className="wrapper">
               <div className="row">

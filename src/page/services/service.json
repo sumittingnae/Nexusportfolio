@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "React Js",
+    "img": "./React.png",
+    "description":"ReactJS service empowers seamless UI development with reusable components, state management, and a virtual DOM for efficient, interactive web applications."
+  },
+  {
+    "id": 2,
+    "name": "Cloud Computing",
+    "img": "./cloudcomputting.png",
+    "description":"Cloud computing service provides scalable, on-demand resources, enhancing flexibility, efficiency, and innovation in application development and deployment."
+   
+  },
+  {
+    "id": 3,
+    "name": "Data anlytic",
+    "img": "./dataanylytic.png",
+    "description":"Data analytic service leverages advanced tools to extract, process, and analyze data, facilitating informed decision-making and strategic insights for businesses. "
+
+  },
+  {
+    "id": 4,
+    "name": "Angular Js",
+    "img": "./angualr.png",
+    "description":"Angular service streamlines web development with modular components and powerful tools for building dynamic, responsive applications. "
+
+  }
+]

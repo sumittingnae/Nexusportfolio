@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "React Js",
+    "img": "./logo-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Cloud Computing",
+    "img": "./logo-5.png"
+   
+  },
+  {
+    "id": 3,
+    "name": "Data anlytic",
+    "img": "./logo-3.png"
+
+  },
+  {
+    "id": 4,
+    "name": "Angular Js",
+    "img": "./logo-4.png"
+
+  },
+    {
+    "id": 5,
+    "name": "Angular Js",
+    "img": "./logo-6.png",
+    "description":"Angular service streamlines web development with modular components and powerful tools for building dynamic, responsive applications. "
+
+  }
+]

@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../component/header/header";
 import './home.scss'
-import { Card,Button } from "react-bootstrap";
-import datas from './service.json'
+
+
+import clients from './client.json';
+import Footer from '../../component/footer/footer';
+
 
 const Home = () => {
-  const[service,setService]=useState([]);
+  //const[service,setService]=useState([]);
+  const[client, setClient]=useState([]);
   useEffect(()=>{
-    setService(datas);
+     setClient(clients);
   })
   return (
     <>
@@ -38,6 +42,41 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      
+
+      <div className="ourclient">
+      
+        <div className="container">
+          <div className="wrapper">
+            <div className="row ">
+              <div className="col-lg-6 w-100">
+                <h1>
+                  <span>Our</span> Client
+                </h1>
+                <div className="card-body">
+                  <div className="container">
+                    <ul className="cards">
+                      {client.map((setClients) => (
+                        <li className="card">
+                          <div className="card-content">
+                            <img
+                              src={setClients.img}
+                              width="200px"
+                              alt={setClients.name}
+                            />
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
 
       {/* <div className="services">
         <div className="container">
@@ -157,47 +196,9 @@ const Home = () => {
           </div>
         </div>
       </div> */}
-      <div className="services">
-        <div className="container">
-          <div className="wrapper">
-            <div className="row">
-              <div className="col-12 col-lg-6 w-100">
-                <div className="title">
-                  <h1>Services</h1>
-                </div>
-                <div className="s-card">
-                  {service.map((items) => (
-                    <Card key={items.id} style={{ width: "18rem" }}>
-                      <Card.Img variant="top" src={items.img} id="img" />
-                      <Card.Body>
-                        <Card.Title>{items.name}</Card.Title>
-                        <Card.Text>
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                      </Card.Body>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="ourclient">
-        <div className="container">
-          <div className="wrapper">
-            <div className="row ">
-              <div className="col-lg-6 w-100">
-                <h1>Our Client</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
 export default Home;
+
+
