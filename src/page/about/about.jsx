@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../component/header/header';
 import './about.scss'
+import Footer from '../../component/footer/footer';
 
 const about=()=>{
 
@@ -116,6 +117,7 @@ const about=()=>{
             </div>
           </div>
         </div>
+        <Footer/>
       </>
     );
 

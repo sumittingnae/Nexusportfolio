@@ -1,9 +1,75 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "../../component/header/header";
 import "./contact.scss";
 import Footer from "../../component/footer/footer";
+import axios from 'axios';
+import { toast } from "react-toastify";
 
-const contact = () => {
+const Contact = () => {
+  const [contact, setContact] = useState({
+    fullName:"",
+    conatct:"",
+    message:"",
+    email:""
+  });
+
+  const handleSubmit=async(e)=>{
+    try{
+      e.preventDefault();
+      const response = await axios.post("http://localhost:3000/contacts",contact,{
+        headers:{
+          'Content-type':'application/json'
+        },
+      }
+      );
+      console.log(response.data);
+      setContact({
+        fullName: "",
+        contact: "",
+        message: "",
+        email: "",
+      });
+
+    }catch(error){
+      console.log("error",error);
+      }
+  }
+  // setContact({
+  //   fullName:"",
+  //   contact:"",
+  //   message:"",
+  //   email:""
+  // })
+
+  if(!contact?.fullName){
+    toast.error("Enter your Full Name")
+    
+  }
+  
+  if (!contact?.conatct) {
+    toast.error("Enter your Conatct");
+  }
+  
+  if (!contact?.email) {
+    toast.error("Enter your Email");
+  }
+  
+  if (!contact?.message) {
+    toast.error("Enter your Message");
+  }else{
+    toast.success("sucessfully send")
+  }
+  
+
+  const handlechange=(e)=>{
+    setContact(
+    (preForm)=>({
+      ...preForm,[e.target.name]:e.target.value,
+    })
+  );
+    console.log(contact);
+  }
+
   return (
     <>
       <Header />
@@ -70,18 +136,48 @@ const contact = () => {
                         <div className="input-Forms">
                           <label>Full Name</label>
                           <br />
-                          <input type="text" placeholder="Full Name" />
-                          <label>Full Name</label>
+                          <input
+                            type="text"
+                            placeholder="Full Name"
+                            name="fullName"
+                            value={contact.fullName}
+                            onChange={handlechange}
+                          />
+                          <label>Contact</label>
                           <br />
-                          <input type="text" placeholder="Full Name" />
-                          <label>Full Name</label>
+                          <input
+                            type="text"
+                            placeholder="Conatct"
+                            maxLength="10"
+                            name="contact"
+                            value={contact.contact}
+                            onChange={handlechange}
+                          />
+                          <label>Email</label>
                           <br />
-                          <input type="text" placeholder="Full Name" />
-                          <label>Full Name</label>
+                          <input
+                            type="text"
+                            placeholder="Email"
+                            name="email"
+                            value={contact.email}
+                            onChange={handlechange}
+                          />
+                          <label>Message</label>
                           <br />
-                          <textarea type="text" placeholder="Full Name" />
+                          <textarea
+                            type="text"
+                            placeholder="Message"
+                            name="message"
+                            value={contact.message}
+                            onChange={handlechange}
+                          />
 
-                          <p className="btn btn-secondary">Submit</p>
+                          <p
+                            className="btn btn-secondary"
+                            onClick={handleSubmit}
+                          >
+                            Submit
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -97,4 +193,4 @@ const contact = () => {
     </>
   );
 };
-export default contact;
+export default Contact;

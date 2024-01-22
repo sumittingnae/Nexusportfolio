@@ -3,6 +3,7 @@ import Header from "../../component/header/header";
 import { Card, Button } from "react-bootstrap";
 import datas from "./service.json";
 import "./service.scss";
+import Footer from "../../component/footer/footer";
 
 const Services = () => {
   const [service, setService] = useState([]);
@@ -42,6 +43,8 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <Footer/>
+      
     </>
   );
 };

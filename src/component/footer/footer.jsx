@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 
-const footer = () => {
+const Footer = () => {
+
+  
+
+  
+
+
+
   return (
     <>
       <div className="footer">
@@ -133,4 +140,4 @@ const footer = () => {
     </>
   );
 };
-export default footer;
+export default Footer;
