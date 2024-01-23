@@ -1,6 +1,7 @@
 body{
   background: #fff;
   font-family: "Quicksand", sans-serif;
+  width: 100%;
 }
 .App { 
   text-align: center;

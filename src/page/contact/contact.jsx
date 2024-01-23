@@ -172,12 +172,13 @@ const Contact = () => {
                             onChange={handlechange}
                           />
 
-                          <p
-                            className="btn btn-secondary"
+                          <button
+                            className="btn text-light"
+                            style={{background:'#ea2323'}}
                             onClick={handleSubmit}
                           >
                             Submit
-                          </p>
+                          </button>
                         </div>
                       </div>
                     </div>

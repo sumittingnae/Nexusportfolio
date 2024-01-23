@@ -131,7 +131,8 @@
 }
 @media(max-width:991px){
     .contact {
-    
+    width: 100%;
+    border: 1px solid #000;
     
             .container {
     
@@ -226,39 +227,46 @@
                                         .forms {
                                             background-color: #eeecec;
         
+                                         .input-forms{
                                             input {
-                                                width: 100%;
-                                                height: 50px;
-                                                border-radius: 15px;
-                                                border: 1px solid #eeecec;
-                                                background-color: #c3c1c1;
-                                                padding: 0px 15px;
-                                                margin-bottom: 20px;
-        
-        
+                                                    width: 100%;
+                                                    height: 50px;
+                                                    border-radius: 15px;
+                                                    border: 1px solid #eeecec;
+                                                    background-color: #c3c1c1;
+                                                    padding: 0px 15px;
+                                                    margin-bottom: 20px;
+                                            
+                                            
+                                                }
+                                            
+                                                input::placeholder {
+                                                    color: aliceblue;
+                                                }
+                                            
+                                                textarea {
+                                                    width: 100%;
+                                                    height: 50px;
+                                                    border-radius: 15px;
+                                                    border: 1px solid #eeecec;
+                                                    background-color: #c3c1c1;
+                                                    padding: 10px 15px;
+                                                    margin-bottom: 20px;
+                                                    height: 100px;
+                                                    resize: none;
+                                            
+                                                }
+                                            
+                                                textarea::placeholder {
+                                                    color: aliceblue;
+                                            
+                                                }
+                                                 .btn{
+                                                background: #ea2323;
+                                                color: #eeecec;
                                             }
-        
-                                            input::placeholder {
-                                                color: aliceblue;
-                                            }
-        
-                                            textarea {
-                                                width: 100%;
-                                                height: 50px;
-                                                border-radius: 15px;
-                                                border: 1px solid #eeecec;
-                                                background-color: #c3c1c1;
-                                                padding: 10px 15px;
-                                                margin-bottom: 20px;
-                                                height: 100px;
-                                                resize: none;
-        
-                                            }
-        
-                                            textarea::placeholder {
-                                                color: aliceblue;
-        
-                                            }
+                                         }
+                                           
         
                                         }
                                     }
