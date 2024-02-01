@@ -49,7 +49,7 @@ const Footer = () => {
                     <div className="row">
                       <div className="col colunm-1 ">
                         <div className="logo">
-                          <img src="./logo.png" alt="" />
+                          <img src="./logo-w.png" alt="" />
                           <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Duis posuere porta velit ac cursus. Phasellus

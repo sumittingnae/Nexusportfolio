@@ -15,12 +15,10 @@ const about=()=>{
                 <div className="col-6 col-12">
                   <div className="col-lg-6 w-100">
                     <div className="title">
-                      <div className="img">
-                        <img src="./About us.svg" alt="about" />
-                      </div>
-
                       <div className="heading">
-                        <h4>ABOUT US</h4>
+                        <h4>
+                          <span>Ab</span>out Us
+                        </h4>
                       </div>
                     </div>
                   </div>

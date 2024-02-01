@@ -1,78 +1,52 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Header from "../../component/header/header";
 import "./contact.scss";
 import Footer from "../../component/footer/footer";
-import axios from 'axios';
 import { toast } from "react-toastify";
 
 const Contact = () => {
   const [contact, setContact] = useState({
-    fullName:"",
-    conatct:"",
-    message:"",
-    email:""
+    fullName: "",
+    contact: "",
+    message: "",
+    email: "",
   });
 
-  const handleSubmit=async(e)=>{
-    try{
-      e.preventDefault();
-      const response = await axios.post("http://localhost:3000/contacts",contact,{
-        headers:{
-          'Content-type':'application/json'
-        },
-      }
-      );
-      console.log(response.data);
-      setContact({
-        fullName: "",
-        contact: "",
-        message: "",
-        email: "",
-      });
+  const handleSubmit = () => {
+    if (
+      !contact.fullName ||
+      !contact.contact ||
+      !contact.email ||
+      !contact.message
+    ) {
+      toast.error("Please fill in all fields");
+      return;
+    }
 
-    }catch(error){
-      console.log("error",error);
-      }
-  }
-  // setContact({
-  //   fullName:"",
-  //   contact:"",
-  //   message:"",
-  //   email:""
-  // })
+    // Save the form data in local storage
+    const storedContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    const updatedContacts = [...storedContacts, contact];
+    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
 
-  if(!contact?.fullName){
-    toast.error("Enter your Full Name")
-    
-  }
-  
-  if (!contact?.conatct) {
-    toast.error("Enter your Conatct");
-  }
-  
-  if (!contact?.email) {
-    toast.error("Enter your Email");
-  }
-  
-  if (!contact?.message) {
-    toast.error("Enter your Message");
-  }else{
-    toast.success("sucessfully send")
-  }
-  
+    toast.success("Successfully sent");
+    setContact({
+      fullName: "",
+      contact: "",
+      message: "",
+      email: "",
+    });
+  };
 
-  const handlechange=(e)=>{
-    setContact(
-    (preForm)=>({
-      ...preForm,[e.target.name]:e.target.value,
-    })
-  );
-    console.log(contact);
-  }
+  const handlechange = (e) => {
+    setContact((prevForm) => ({
+      ...prevForm,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <>
-      <Header />
+    <Header/>
       <div className="contact">
         <div className="container">
           <div className="wrapper">
@@ -80,22 +54,18 @@ const Contact = () => {
               <div className="col-6 col-12">
                 <div className="col-lg-6 w-100">
                   <div className="title">
-                    <div className="img">
-                      <img src="./contact.svg" alt="contact" />
-                    </div>
-
                     <div className="heading">
-                      <h4>Conatct US</h4>
+                      <h4>
+                        <span>Con</span>tact Us
+                      </h4>
                     </div>
                   </div>
-                  <div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="contact-content">
         <div className="container">
           <div className="wrapper">
@@ -174,7 +144,7 @@ const Contact = () => {
 
                           <button
                             className="btn text-light"
-                            style={{background:'#ea2323'}}
+                            style={{ background: "#ea2323" }}
                             onClick={handleSubmit}
                           >
                             Submit
@@ -188,10 +158,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <Footer />
+      </div>{" "}
+      <Footer/>
     </>
   );
 };
+
 export default Contact;
