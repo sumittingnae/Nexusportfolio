@@ -18,6 +18,7 @@ const Home = () => {
   useEffect(() => {
     setClient(clients);
   },[]);
+
   const [service, setService] = useState([]);
 
   useEffect(() => {
